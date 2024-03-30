@@ -21,4 +21,4 @@ class Task(models.Model):
     priority = models.CharField(max_length=63, choices=PRIORITY_CHOISES, default='medium')
     due_data = models.DateTimeField(blank=True, null=True)
 
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='task')
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks')
